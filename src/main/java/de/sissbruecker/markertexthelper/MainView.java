@@ -34,7 +34,7 @@ public class MainView extends HorizontalLayout {
         marker.setText("Label position:\n" + textPosition.name().toLowerCase());
         map.getFeatureLayer().addFeature(marker);
 
-        MarkerTextHelper.setTextPosition(marker, textPosition, 10);
+        MarkerTextHelper.setTextPosition(marker, textPosition, 5);
     }
 
     private void addDot(Coordinate coordinate, MarkerTextHelper.TextPosition textPosition) {
@@ -43,6 +43,6 @@ public class MainView extends HorizontalLayout {
         marker.setText("Label position:\n" + textPosition.name().toLowerCase());
         map.getFeatureLayer().addFeature(marker);
 
-        MarkerTextHelper.setTextPosition(marker, textPosition, 15);
+        MarkerTextHelper.setTextPosition(marker, textPosition, 5);
     }
 }

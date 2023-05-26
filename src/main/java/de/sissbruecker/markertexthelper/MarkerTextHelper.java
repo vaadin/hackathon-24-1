@@ -22,8 +22,8 @@ public class MarkerTextHelper {
         TextStyle textStyle = feature.getTextStyle();
 
         double offsetX = 0, offsetY = 0;
-        double imageWidth = icon.getImgSize().getWidth();
-        double imageHeight = icon.getImgSize().getHeight();
+        double imageWidth = icon.getImgSize().getWidth() * icon.getScale();
+        double imageHeight = icon.getImgSize().getHeight() * icon.getScale();
         double imageLeft = -imageWidth * icon.getAnchor().getX();
         double imageTop = -imageHeight * icon.getAnchor().getY();
 
@@ -63,6 +63,6 @@ public class MarkerTextHelper {
             offsetY = imageTop + imageHeight + spacing;
         }
 
-        textStyle.setOffset((int) Math.round(offsetX * icon.getScale()), (int) Math.round(offsetY * icon.getScale()));
+        textStyle.setOffset((int) Math.round(offsetX), (int) Math.round(offsetY));
     }
 }
