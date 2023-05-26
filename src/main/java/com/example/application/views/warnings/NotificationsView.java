@@ -12,6 +12,7 @@ import com.vaadin.flow.router.RouteAlias;
 @PageTitle("Notifications")
 @Route(value = "notifications", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
+@RouteAlias(value = "flame", layout = MainLayout.class)
 public class NotificationsView extends HorizontalLayout {
 
     public NotificationsView() {

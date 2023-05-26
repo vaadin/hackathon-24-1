@@ -19,3 +19,6 @@ when setting collapsible without label falls apart
 Clicking on the collapse icon, doesn't do anything. 
 * SideNavItem with external link. There's no API to make it open in a new tab.
   https://github.com/vaadin/flow-components/issues/5091
+* SideNavItem is not marked as active, when accessing view through RouterAlias
+Turns out issue exists that includes this problem:
+https://github.com/vaadin/web-components/issues/5819
