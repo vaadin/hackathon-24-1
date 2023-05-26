@@ -1,6 +1,7 @@
 package com.example.application.views;
 
 import com.example.application.views.about.AboutView;
+import com.example.application.views.other.OtherView;
 import com.example.application.views.warnings.NotificationsView;
 import com.example.application.views.warnings.ParagraphView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -63,8 +64,16 @@ public class MainLayout extends AppLayout {
         warningItems.addItem(new SideNavItem("Notifications", NotificationsView.class, LineAwesomeIcon.BELL_SOLID.create()));
         warningItems.addItem(new SideNavItem("Paragraphs", ParagraphView.class, LineAwesomeIcon.PARAGRAPH_SOLID.create()));
         warningItems.setExpanded(true);
-
         nav.addItem(warningItems);
+
+        var otherItems = new SideNavItem("Other", OtherView.class, LineAwesomeIcon.ARCHIVE_SOLID.create());
+        var external = new SideNavItem("External link", "https://example.com", LineAwesomeIcon.LINK_SOLID.create());
+        otherItems.addItem(external);
+
+        var infoTextItem = new SideNavItem("Just some info here");
+        otherItems.addItem(infoTextItem);
+
+        nav.addItem(otherItems);
         nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
 
         return nav;
