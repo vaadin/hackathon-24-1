@@ -1,0 +1,17 @@
+vaadin-side-nav {
+    --_child-indent: 0;
+}
+
+vaadin-side-nav > vaadin-side-nav-item vaadin-side-nav-item {
+    border-left: 1px solid #777;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+vaadin-side-nav > vaadin-side-nav-item vaadin-side-nav-item[expanded] {
+    border-left: 1px solid lightgray;
+}
+
+vaadin-side-nav-item::part(item) {
+    padding-inline-start: unset;
+}

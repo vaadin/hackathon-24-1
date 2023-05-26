@@ -1,0 +1,39 @@
+vaadin-app-layout div.splitter[slot="drawer"] {
+
+    /* Width of the visible splitter part */
+    --vaadin-app-layout-drawer-splitter-visible-width: 2px;
+
+    /* Width of the draggable splitter part (includes visible width)*/
+    --vaadin-app-layout-drawer-splitter-draggable-width: 6px;
+
+    --vaadin-app-layout-drawer-splitter-z-index: 5000;
+    --vaadin-app-layout-drawer-splitter-transition-time: 400ms;
+    --vaadin-app-layout-drawer-splitter-color: transparent;
+    --vaadin-app-layout-drawer-splitter-hover-color: var(--lumo-contrast-20pct);
+    --vaadin-app-layout-drawer-splitter-cursor: ew-resize;
+
+
+    cursor: var(--vaadin-app-layout-drawer-splitter-cursor);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: var(--vaadin-app-layout-drawer-splitter-z-index);
+    padding-left: calc(var(--vaadin-app-layout-drawer-splitter-draggable-width) - var(--vaadin-app-layout-drawer-splitter-visible-width))
+}
+
+vaadin-app-layout div.splitter[slot="drawer"]::before {
+    display: block;
+    content: '';
+
+    width: var(--vaadin-app-layout-drawer-splitter-visible-width);
+    height: 100%;
+
+    background-color: var(--vaadin-app-layout-drawer-splitter-color);
+    transition: background-color var(--vaadin-app-layout-drawer-splitter-transition-time);
+}
+
+vaadin-app-layout div.splitter[slot="drawer"]:is(:hover,:active)::before {
+    background-color: var(--vaadin-app-layout-drawer-splitter-hover-color);
+}
+

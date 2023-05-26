@@ -10,3 +10,14 @@
 - If there is no code add a README or screenshots
 - Everyone will get a present.
 - Gift for 3 winners 
+
+# Created things
+## Content
+- Added a component to make the app layout drawer resizable (hover the right border of the drawer - you should see a horizontal resize icon)
+- Added some styling to the side nav hierarchy (based on a design by Juuso made for a customer)
+
+## Issues
+- https://github.com/vaadin/flow-components/issues/5088
+- https://github.com/vaadin/flow/issues/16886
+- https://github.com/vaadin/flow-components/issues/5092 (incl workaround)
+- https://github.com/vaadin/flow-components/issues/5093

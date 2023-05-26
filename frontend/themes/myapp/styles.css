@@ -1,0 +1,5 @@
+@import url('./main-layout.css');
+
+body {
+    /*--vaadin-app-layout-drawer-splitter-width: 2px;*/
+}
