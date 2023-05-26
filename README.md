@@ -1,7 +1,21 @@
 # Viaggiare
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+![Screenshot](viaggiare.png)
+
+> **Note**
+> An OpenWeatherMap API key is needed to use this example. I'll provide one in Slack or you can get one for free at https://openweathermap.org/api.
+
+This application tests marker drag and drop and marker styling in Vaadin Maps.
+
+All you have to do is to drag the marker and drop anywhere on the map. The application will then show the weather icon and the name of the place where you dropped the marker.
+
+The marker label will contain the city (if found), the country name and the country flag.
+
+The text color of the marker label will change depending on the latitude of the dropped marker.
+
+The APIs used have request limits, so you may get an error message if you try to drag the marker too many times.
+
+I didn't clean up the code, it is just how it came out of the box. Also, I have to greet ChatGPT for the help in the development of this little example.
 
 ## Running the application
 
