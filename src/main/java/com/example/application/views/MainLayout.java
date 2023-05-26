@@ -1,7 +1,8 @@
 package com.example.application.views;
 
 import com.example.application.views.about.AboutView;
-import com.example.application.views.hackaton241test.Hackaton24P1MainTestView;
+import com.example.application.views.warnings.NotificationsView;
+import com.example.application.views.warnings.ParagraphView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -54,10 +55,16 @@ public class MainLayout extends AppLayout {
         // Both will be addressed in an upcoming minor version.
         // These changes are likely to cause some breaking change to the custom css
         // applied to the component.
-        SideNav nav = new SideNav();
+        SideNav nav = new SideNav("Siiiide");
+        nav.setCollapsible(true);
 
-        nav.addItem(
-                new SideNavItem("Hackaton 24.1 test", Hackaton24P1MainTestView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
+        var warningItems = new SideNavItem("Warnings");
+        warningItems.setPrefixComponent(LineAwesomeIcon.EXCLAMATION_TRIANGLE_SOLID.create());
+        warningItems.addItem(new SideNavItem("Notifications", NotificationsView.class, LineAwesomeIcon.BELL_SOLID.create()));
+        warningItems.addItem(new SideNavItem("Paragraphs", ParagraphView.class, LineAwesomeIcon.PARAGRAPH_SOLID.create()));
+        warningItems.setExpanded(true);
+
+        nav.addItem(warningItems);
         nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
 
         return nav;
