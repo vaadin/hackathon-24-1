@@ -1,4 +1,6 @@
-# Hilla DX test with Maven
+# Hilla DX test
+
+## Maven
 
 - Unzip demo project and opened on the IDE
 - Start project
@@ -208,3 +210,35 @@ Accessing the application, therefore, presents the following error
 ```
 
 ![Lit browser error](assets/hilladx/lit_browser_error.png)
+
+
+## Gradle
+
+- Unzip demo project and opened on the IDE
+- `hillaInitApp` task has a description :+1
+- running the `hillaInitApp` task correctly creates the sources.
+- Application starts and works correctly
+- Interesting to note that there are no restarts, contrary to what happens with Maven
+- Even with gradle, `hillaInitApp` does not generate the view when using Lit
+
+
+## Notes
+
+It seems like the `Connection refused` error happens when there's a browser request during Vite restart.
+This seems to be an issue in Flow.
+
+```
+2023-05-26T12:38:38.956+02:00  INFO 49464 --- [v-server-output] c.v.b.devserver.DevServerOutputTracker   : [vite] target/vaadin-dev-server-settings.json changed, restarting server...
+2023-05-26T12:38:38.956+02:00  INFO 49464 --- [v-server-output] c.v.b.devserver.DevServerOutputTracker   : [vite] vite.generated.ts changed, restarting server...
+2023-05-26T12:38:38.995+02:00  INFO 49464 --- [onPool-worker-4] c.v.b.devserver.AbstractDevServerRunner  : Reusing Vite running at http://127.0.0.1:35769
+2023-05-26T12:38:39.053+02:00 ERROR 49464 --- [nio-8080-exec-4] c.v.flow.server.DefaultErrorHandler      : 
+
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	...
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar:10.1.8]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-05-26T12:38:39.063+02:00  INFO 49464 --- [v-server-output] c.v.b.devserver.DevServerOutputTracker   : [vite] server restarted.	
+```
