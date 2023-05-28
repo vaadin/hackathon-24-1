@@ -118,6 +118,12 @@ public class MapView extends HorizontalLayout {
             e.printStackTrace();
         }
 
+        // https://sys.airtel.lv/ip2country/81.182.134.56/?full=true
+        // scan the above URL and then creating JSON and then parsing it
+        // https://www.baeldung.com/java-org-json
+
+        // create proper location and add it to the map.
+
         addClassName("map-view");
         setSizeFull();
         setPadding(false);

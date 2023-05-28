@@ -8,6 +8,8 @@ public class CallPythonScript {
 
     public static void main(String[] args) {
         try {
+            // fix this to be able to pass parameters:
+
             // Path to the Python script
             String pythonScriptPath = "/Users/pczuczor/Projects/utils/youtube/download_caption.py";
 
