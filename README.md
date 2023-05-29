@@ -4,11 +4,14 @@ This Hackathon project had two main subprojects:
 - Summary view: which can generate a summary test for shorter YouTube videos (Tokenization is not done, so 4-5 min is the limit now)
 - Map view: which is getting the user IP and then using GeoLocate service for address and adding that to the Map (not finished)
 
+Public URL:
+- http://8f92-81-182-134-56.ngrok-free.app
 
 ## Notes:
-- Pyhton 3 need to be installed properly, plus:
+- Pyhton 3 need to be installed properly and added to your Path, plus:
 - pip install youtube_transcript_api
 - test if you can execute this python script src/python_script/download_caption.py
+- Use your OpenAI ApiKey as OpenAI revokes mine if see publicly leaked.
 
 ## Steps:
 1. Enter a Youtube video URL
