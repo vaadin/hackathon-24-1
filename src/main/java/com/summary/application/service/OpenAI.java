@@ -5,6 +5,7 @@ import com.theokanning.openai.completion.chat.ChatCompletionResult;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.service.OpenAiService;
 
+import javax.swing.*;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,11 @@ public class OpenAI {
     public static String getSummary(String caption) {
             try {
                 // OpenAI API key
-                String apiKey = "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";
+                String apiKey = "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";
 
                 // Set the prompt
                 String prompt = "Check the caption below, and make a summary of it in 5 points with timestamps, try to catch the most important key points: \n\n";
 
-                // String instruction = "You are a friendly and helpful social robot. Your name is Furhat. You give very brief answers.";
                 List<ChatMessage> messages = new ArrayList<>();
                 ChatMessage chatMessage = new ChatMessage();
                 chatMessage.setRole("system");
@@ -43,7 +43,8 @@ public class OpenAI {
                 return choices.get(0).getMessage().getContent();
 
             } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
+                System.out.println("Error in GetSummary: " + e.getMessage());
+                e.printStackTrace();
                 return "";
             }
         }
