@@ -122,12 +122,14 @@ public class MapView extends HorizontalLayout {
         }
 
         // Using this API: https://sys.airtel.lv/ip2country/81.182.134.56/?full=true
-        try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://sys.airtel.lv/ip2country/" + IP + "/?full=true").openStream(), "UTF-8").useDelimiter("\\A")) {
-            String JsonLocation = s.next();
-            System.out.println("My current location is" + IP);
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
+//        try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://sys.airtel.lv/ip2country/" + IP + "/?full=true").openStream(), "UTF-8").useDelimiter("\\A")) {
+//            String JsonLocation = s.next();
+//            System.out.println("My current location is" + IP);
+//        } catch (java.io.IOException e) {
+//            e.printStackTrace();
+//        }
+
+
 
         addClassName("map-view");
         setSizeFull();

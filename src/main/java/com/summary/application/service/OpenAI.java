@@ -1,5 +1,7 @@
 package com.summary.application.service;
+import com.theokanning.openai.completion.chat.ChatCompletionChoice;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
+import com.theokanning.openai.completion.chat.ChatCompletionResult;
 import com.theokanning.openai.completion.chat.ChatMessage;
 import com.theokanning.openai.service.OpenAiService;
 
@@ -16,7 +18,7 @@ public class OpenAI {
     public static String getSummary(String caption) {
             try {
                 // OpenAI API key
-                String apiKey = "";
+                String apiKey = "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";
 
                 // Set the prompt
                 String prompt = "Check the caption below, and make a summary of it in 5 points with timestamps, try to catch the most important key points: \n\n";
@@ -35,10 +37,10 @@ public class OpenAI {
                         .messages(messages)
                         .model("gpt-3.5-turbo")
                         .build();
-                service.createChatCompletion(completionRequest).getChoices().forEach(System.out::println);
+                List<ChatCompletionChoice> choices = service.createChatCompletion(completionRequest).getChoices();
+                choices.forEach(System.out::println);
 
-                String choices = service.createChatCompletion(completionRequest).getChoices().toString();
-                return choices;
+                return choices.get(0).getMessage().getContent();
 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
