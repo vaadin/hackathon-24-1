@@ -19,7 +19,7 @@ public class CallPythonScriptForYoutubeCaption {
             // fix this to be able to pass parameters:
 
             // Path to the Python script
-            String pythonScriptPath = "/Users/pczuczor/Projects/utils/youtube/download_caption.py";
+            String pythonScriptPath = "src/python_script/download_caption.py";
 
             // Build the command to execute the Python script
             ProcessBuilder processBuilder = new ProcessBuilder("python3", pythonScriptPath);
