@@ -1,4 +1,4 @@
-# hackathon-24-1
+# EV Stats
 
 I created a simple app that shows a bunch of car registration related information in Finland: https://github.com/vesanieminen/evstats
 
