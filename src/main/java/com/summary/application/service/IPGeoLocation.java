@@ -4,6 +4,7 @@ import io.ipgeolocation.api.GeolocationParams;
 import io.ipgeolocation.api.IPGeolocationAPI;
 import  io.ipgeolocation.api.Geolocation;
 
+//Not Used.
 public class IPGeoLocation {
     public static void main(String[] args) {
             // Create IPGeolocationAPI object, passing your valid API key

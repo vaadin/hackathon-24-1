@@ -106,23 +106,28 @@ public class MapView extends HorizontalLayout {
     private List<Location> filteredLocations;
     private final java.util.Map<Feature, Location> featureToLocation = new HashMap<>();
 
-    public MapView() throws UnknownHostException {
+    public MapView()  {
         // get ip for Vaadin request
+        // These are not working properly:
 //        String ipNew =  getClientIpAddr(VaadinRequest.getCurrent());
 //        System.out.println("ipv6 getClientIpAddr(VaadinRequest.getCurrent()): " + ipNew);
-        // System.out.println("ipv4 transformIpv6ToIpv4: " + transformIpv6ToIpv4(ipNew));
+//        System.out.println("ipv4 transformIpv6ToIpv4: " + transformIpv6ToIpv4(ipNew));
 
+        String IP = "";
         try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://api.ipify.org").openStream(), "UTF-8").useDelimiter("\\A")) {
-            System.out.println("My current IP address is " + s.next());
+            IP = s.next();
+            System.out.println("My current IP address is " + IP);
         } catch (java.io.IOException e) {
             e.printStackTrace();
         }
 
-        // https://sys.airtel.lv/ip2country/81.182.134.56/?full=true
-        // scan the above URL and then creating JSON and then parsing it
-        // https://www.baeldung.com/java-org-json
-
-        // create proper location and add it to the map.
+        // Using this API: https://sys.airtel.lv/ip2country/81.182.134.56/?full=true
+        try (java.util.Scanner s = new java.util.Scanner(new java.net.URL("https://sys.airtel.lv/ip2country/" + IP + "/?full=true").openStream(), "UTF-8").useDelimiter("\\A")) {
+            String JsonLocation = s.next();
+            System.out.println("My current location is" + IP);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+        }
 
         addClassName("map-view");
         setSizeFull();
