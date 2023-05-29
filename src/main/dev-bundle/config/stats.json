@@ -74,9 +74,9 @@
   "construct-style-sheets-polyfill": "3.1.0",
   "date-fns": "2.29.3",
   "lit": "2.7.4",
-  "lumo-css-framework": "3.0.11",
   "mobile-drag-drop": "2.3.0-rc.2",
-  "proj4": "2.9.0"
+  "proj4": "2.9.0",
+  "sortablejs": "1.14.0"
  },
  "npmModules": {
   "@lit/reactive-element": "1.6.1",
@@ -156,13 +156,13 @@
   "is-regexp": "3.1.0",
   "lit-element": "3.3.2",
   "lit-html": "2.7.4",
-  "lumo-css-framework": "3.0.11",
   "mgrs": "1.0.0",
   "mobile-drag-drop": "2.3.0-rc.2",
   "ol": "6.13.0",
   "proj4": "2.9.0",
   "quickselect": "2.0.0",
   "rbush": "3.0.1",
+  "sortablejs": "1.14.0",
   "strip-css-comments": "5.0.0",
   "tslib": "2.5.2",
   "wkt-parser": "1.3.3"
@@ -244,7 +244,6 @@
   "@vaadin/vaadin-lumo-styles/typography-global.js",
   "@vaadin/vaadin-lumo-styles/utility-global.js",
   "@vaadin/vaadin-lumo-styles/vaadin-iconset.js",
-  "@vaadin/vaadin-themable-mixin",
   "@vaadin/vertical-layout/theme/lumo/vaadin-vertical-layout.js",
   "@vaadin/virtual-list/theme/lumo/vaadin-virtual-list.js",
   "Frontend/generated/jar-resources/buttonFunctions.js",
@@ -260,20 +259,14 @@
   "Frontend/generated/jar-resources/lit-renderer.ts",
   "Frontend/generated/jar-resources/menubarConnector.js",
   "Frontend/generated/jar-resources/messageListConnector.js",
-  "Frontend/generated/jar-resources/org/vaadin/firitin/bytearrayuploadfield.css",
-  "Frontend/generated/jar-resources/org/vaadin/firitin/components/tree.css",
-  "Frontend/generated/jar-resources/org/vaadin/firitin/layouts/appframework.css",
-  "Frontend/generated/jar-resources/org/vaadin/firitin/layouts/border-layout.js",
-  "Frontend/generated/jar-resources/org/vaadin/firitin/padding-fix-for-dialog.css",
   "Frontend/generated/jar-resources/selectConnector.js",
-  "Frontend/generated/jar-resources/theme-util.js",
+  "Frontend/generated/jar-resources/sortableConnector.js",
   "Frontend/generated/jar-resources/tooltip.ts",
   "Frontend/generated/jar-resources/vaadin-big-decimal-field.js",
   "Frontend/generated/jar-resources/vaadin-grid-flow-selection-column.js",
   "Frontend/generated/jar-resources/vaadin-map/mapConnector.js",
   "Frontend/generated/jar-resources/vaadin-time-picker/timepickerConnector.js",
-  "Frontend/generated/jar-resources/virtualListConnector.js",
-  "lumo-css-framework/all-classes.css"
+  "Frontend/generated/jar-resources/virtualListConnector.js"
  ],
  "frontendHashes": {
   "buttonFunctions.js": "c852123f9b2c44eb75e555119d3e05a7dbe78b91d0ab616feb9df1654474707d",
@@ -289,13 +282,8 @@
   "lit-renderer.ts": "afefa9f5fcb38260a0ff08bc044a5f591f242689ca3c7905130ad32df0476e7c",
   "menubarConnector.js": "8ddac5a87155632c516fd16c9402bd9a2fe6d965998169743744842aacdfd412",
   "messageListConnector.js": "480d7092b9fe42aab45756eb4287b2c4b0d6e5d38514e967543bc5c317948c18",
-  "org/vaadin/firitin/bytearrayuploadfield.css": "d0386375730412c41dd2ab1ddd30c00ad513a4ba790d06ce52cba2fa4c9b3486",
-  "org/vaadin/firitin/components/tree.css": "5068debaa0055b0cdda8d1553c46c04eab861532ddb56868f202d0b732d9f720",
-  "org/vaadin/firitin/layouts/appframework.css": "1117add98f9806b91eaa6658fccbf6ada8e8df79c05b52b2f4739a1c1879957b",
-  "org/vaadin/firitin/layouts/border-layout.js": "147c86186db87a48024eef4b29ff53f32a517ad6508a409192e52c7c1a19533f",
-  "org/vaadin/firitin/padding-fix-for-dialog.css": "a3dc3fb0dc060701ddad84cf65775aacbd8d57e74313b99117657286ed167051",
   "selectConnector.js": "bd4277e735d390853603351ddd963233349b702789ddf8ce000df5179bb30523",
-  "theme-util.js": "100fd0a67f04eb76cb695b406eb943400e60f396106373ae9543ff5f283b3a63",
+  "sortableConnector.js": "9a4903c42af20cba47efeda709d646a258bf416fa48639bc7a19171042463383",
   "tooltip.ts": "b7e9af67169277b94cab722d244340c3a9d463bcf4de2aaa84dddcebbd59447b",
   "vaadin-big-decimal-field.js": "0e0f4e3bb8928c708d02e77d07ede09525102440511942e3b24721702352f140",
   "vaadin-grid-flow-selection-column.js": "f365d122c334d411f30c5463fb7c0dbfde705f3ee3924bcd41837f7d0a9a0301",
@@ -307,7 +295,7 @@
   "myapp": "{\n  \"lumoImports\" : [ \"typography\", \"color\", \"spacing\", \"badge\", \"utility\" ]\n}"
  },
  "entryScripts": [
-  "VAADIN/build/indexhtml-a79cf08b.js"
+  "VAADIN/build/indexhtml-7dc67e4a.js"
  ],
  "webComponents": [],
  "cvdlModules": {
@@ -340,8 +328,8 @@
    "version": "24.1.0-beta2"
   }
  },
- "packageJsonHash": "2cac8ede44934fc97fb9397fb87aa63f92fbbb0cc2da148a5c00dbcd2b34b17f",
+ "packageJsonHash": "b3916af6f756489395a5198825a66e0de7cef311692532cf00cf15c4f324955d",
  "indexHtmlGenerated": [
-  "  <script type=\"module\" crossorigin src=\"./VAADIN/build/indexhtml-a79cf08b.js\"></script>"
+  "  <script type=\"module\" crossorigin src=\"./VAADIN/build/indexhtml-7dc67e4a.js\"></script>"
  ]
 }
