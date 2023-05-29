@@ -77,8 +77,7 @@
     "date-fns": "2.29.3",
     "lit": "2.7.4",
     "mobile-drag-drop": "2.3.0-rc.2",
-    "proj4": "2.9.0",
-    "sortablejs": "1.14.0"
+    "proj4": "2.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "5.0.2",
@@ -173,8 +172,7 @@
     "date-fns": "$date-fns",
     "@vaadin/a11y-base": "$@vaadin/a11y-base",
     "@vaadin/side-nav": "$@vaadin/side-nav",
-    "mobile-drag-drop": "$mobile-drag-drop",
-    "sortablejs": "$sortablejs"
+    "mobile-drag-drop": "$mobile-drag-drop"
   },
   "vaadin": {
     "dependencies": {
@@ -253,8 +251,7 @@
       "date-fns": "2.29.3",
       "lit": "2.7.4",
       "mobile-drag-drop": "2.3.0-rc.2",
-      "proj4": "2.9.0",
-      "sortablejs": "1.14.0"
+      "proj4": "2.9.0"
     },
     "devDependencies": {
       "@rollup/plugin-replace": "5.0.2",
@@ -273,6 +270,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "b3916af6f756489395a5198825a66e0de7cef311692532cf00cf15c4f324955d"
+    "hash": "b24c4e24dbba5a509581afc3ee23612321ba91cf551c9d31b1e98bc2804be81f"
   }
 }
